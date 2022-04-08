@@ -35,7 +35,7 @@ public class Empleado {
         var retorno=100000d;
         double r;
         r=this.costoHora*this.horasTrabajadas;
-        if(r>=0 && r<=limite1){
+        if(r>0 && r<=limite1){
             retorno=0;
         }else{
             if(r>limite1 && r<=limite2){

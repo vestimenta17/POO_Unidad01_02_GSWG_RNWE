@@ -27,6 +27,9 @@ public class POO_Unidad01_02_GSWG_RNWE {
         var bono=empleado1.calcularBonoHorasExtra(150);
         System.out.println("El valor del bono es: "+bono);
         var impuestos=empleado1.calcularImpuesto(500, 1000, 2000);
+        System.out.println("El impuesto es: "+empleado1.calcularImpuesto(500, 1000, 2000));
+        var resta=ingresos+bono-impuestos;
+        System.out.println("El valor total a pagar es: "+resta);
         
         var empleado2= new Empleado();
         empleado2.nombre="Marta";
@@ -41,6 +44,10 @@ public class POO_Unidad01_02_GSWG_RNWE {
         System.out.println("El valor de ingresos es: "+ingresos2);
         var bono2=empleado2.calcularBonoHorasExtra(100);
         System.out.println("El valor del bono es: "+bono2);
+        var impuestos2=empleado2.calcularImpuesto(500, 1000, 2000);
+        System.out.println("El impuesto es: "+empleado2.calcularImpuesto(500, 1000, 2000));
+        var resta2=ingresos2+bono2-impuestos2;
+        System.out.println("El valor total a pagar es: "+resta2);
         
         var empleado3= new Empleado();
         empleado3.nombre="Esteban";
@@ -55,6 +62,10 @@ public class POO_Unidad01_02_GSWG_RNWE {
         System.out.println("El valor de ingresos es: "+ingresos3);
         var bono3=empleado3.calcularBonoHorasExtra(100);
         System.out.println("El valor del bono es: "+bono3);
+        var impuestos3=empleado3.calcularImpuesto(500, 1000, 2000);
+        System.out.println("El impuesto es: "+empleado3.calcularImpuesto(500, 1000, 2000));
+        var resta3=ingresos3+bono3-impuestos3;
+        System.out.println("El valor total a pagar es: "+resta3);
         
     }
 }
