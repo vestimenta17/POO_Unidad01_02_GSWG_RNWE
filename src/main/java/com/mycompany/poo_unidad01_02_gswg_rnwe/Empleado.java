@@ -16,7 +16,7 @@ public class Empleado {
     public double calcularIngresos(int añoActual){
         var retorno=100000d;
         if(this.añoIngreso<añoActual){
-            retorno=(this.costoHora*this.horasTrabajadas)+(this.costoHora*this.horasTrabajadas*0.02);
+            retorno=(this.costoHora*this.horasTrabajadas)*((añoActual-this.añoIngreso)*0.02)+(this.costoHora*this.horasTrabajadas);
         }else{
             retorno=(this.costoHora*this.horasTrabajadas);
         }
@@ -33,7 +33,23 @@ public class Empleado {
     }
     public double calcularImpuesto(int limite1, int limite2, int limite3){
         var retorno=100000d;
-        
+        double r;
+        r=this.costoHora*this.horasTrabajadas;
+        if(r>=0 && r<=limite1){
+            retorno=0;
+        }else{
+            if(r>limite1 && r<=limite2){
+                retorno=this.costoHora*this.horasTrabajadas*0.05;
+            }else{
+                if(r>limite2 && r<=limite3){
+                    retorno=this.costoHora*this.horasTrabajadas*0.12;
+                }else{
+                    if(r>limite3){
+                        retorno=this.costoHora*this.horasTrabajadas*0.25;
+                    }
+                }      
+            }
+        }
         return retorno;
     }
 }

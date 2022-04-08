@@ -15,16 +15,46 @@ public class POO_Unidad01_02_GSWG_RNWE {
         System.out.println("Hello World!");
         var empleado1= new Empleado();
         empleado1.nombre="Julian";
-        empleado1.horasTrabajadas=2000;
-        empleado1.costoHora=2;
-        empleado1.añoIngreso=2022;  
+        empleado1.horasTrabajadas=160;
+        empleado1.costoHora=11.5;
+        empleado1.añoIngreso=2003;  
         System.out.println( empleado1.nombre+" | "+
                             empleado1.horasTrabajadas+" | "+
                             empleado1.costoHora+" | "+
                             empleado1.añoIngreso+" | ");
         var ingresos=empleado1.calcularIngresos(2022);
         System.out.println("El valor de ingresos es: "+ingresos);
-        var bono=empleado1.calcularBonoHorasExtra(1920);
+        var bono=empleado1.calcularBonoHorasExtra(150);
         System.out.println("El valor del bono es: "+bono);
+        var impuestos=empleado1.calcularImpuesto(500, 1000, 2000);
+        
+        var empleado2= new Empleado();
+        empleado2.nombre="Marta";
+        empleado2.horasTrabajadas=100;
+        empleado2.costoHora=9;
+        empleado2.añoIngreso=2010;  
+        System.out.println( empleado2.nombre+" | "+
+                            empleado2.horasTrabajadas+" | "+
+                            empleado2.costoHora+" | "+
+                            empleado2.añoIngreso+" | ");
+        var ingresos2=empleado2.calcularIngresos(2022);
+        System.out.println("El valor de ingresos es: "+ingresos2);
+        var bono2=empleado2.calcularBonoHorasExtra(150);
+        System.out.println("El valor del bono es: "+bono2);
+        
+        var empleado3= new Empleado();
+        empleado3.nombre="Esteban";
+        empleado3.horasTrabajadas=100;
+        empleado3.costoHora=6;
+        empleado3.añoIngreso=2010;  
+        System.out.println( empleado3.nombre+" | "+
+                            empleado3.horasTrabajadas+" | "+
+                            empleado3.costoHora+" | "+
+                            empleado3.añoIngreso+" | ");
+        var ingresos3=empleado3.calcularIngresos(2022);
+        System.out.println("El valor de ingresos es: "+ingresos3);
+        var bono3=empleado3.calcularBonoHorasExtra(100);
+        System.out.println("El valor del bono es: "+bono3);
+        
     }
 }
